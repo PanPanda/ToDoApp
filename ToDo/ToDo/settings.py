@@ -67,6 +67,24 @@ STATIC_ROOT = ''
 # Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = (
+    'static',
+    )
+
+
+TEMPLATE_DIRS = (
+    'os.path.join(BASE_DIR, 'templates')',
+    )
+
+TEMPLATE_CONTEXT_PROCESSORS = (  
+    'django.core.context_processors.debug',  
+    'django.core.context_processors.i18n',  
+    'django.core.context_processors.media',  
+    'django.core.context_processors.static',  
+    'django.contrib.auth.context_processors.auth',  
+    'django.contrib.messages.context_processors.messages',  
+)  
+
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
